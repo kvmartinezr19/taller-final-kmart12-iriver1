@@ -154,7 +154,18 @@ public class Main {
                     }
                     break;
                 case 2:
-                    System.out.println("opc2 ");
+                    System.out.print("**************************************************************\n");
+                    System.out.print("**                        STRING                            **\n");
+                    System.out.print("**************************************************************\n");
+                    System.out.print("**  En Java, los string son un objeto el cual nos permite   **\n");
+                    System.out.print("**  almacenar muchos caracteres                             **\n");
+                    System.out.print("**                                                          **\n");
+                    System.out.print("**  Por ejemplo:                                            **\n");
+                    System.out.print("**     String mensaje = `Hola Mundo`;                       **\n");
+                    System.out.print("**     String nombre= `Tito`;                               **\n");
+                    System.out.print("**************************************************************\n");
+                    System.out.println("Presiona Enter para continuar...");
+                    scanner.nextLine();
                     break;
                 case 3:
                     System.out.print("**************************************************************\n");
