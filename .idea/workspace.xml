@@ -31,7 +31,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Programación Basica/taller-java-kmart12/repositorio-taller-punto1-kmart12&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Programación Basica/modulo-poo-java&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;D:/Programación Basica/taller-final-kmart12-iriver1/src/Main.java&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.folding&quot;
   }
@@ -67,5 +67,16 @@
       <updated>1723560089722</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>150</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
