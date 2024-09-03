@@ -154,7 +154,18 @@ public class Main {
                     }
                     break;
                 case 2:
-                    System.out.println("opc2 ");
+                    System.out.print("**************************************************************\n");
+                    System.out.print("**                          STRING                          **\n");
+                    System.out.print("**************************************************************\n");
+                    System.out.print("**  En Java, los string son un objeto el cual nos permite   **\n");
+                    System.out.print("**  almacenar muchos caracteres.                            **\n");
+                    System.out.print("**                                                          **\n");
+                    System.out.print("**  Por ejemplo:                                            **\n");
+                    System.out.print("**     String mensaje = `Hola Mundo`;                       **\n");
+                    System.out.print("**     String nombre= `Tito`;                               **\n");
+                    System.out.print("**************************************************************\n");
+                    System.out.println("Presiona Enter para continuar...");
+                    scanner.nextLine();
                     break;
                 case 3:
                     System.out.print("**************************************************************\n");
@@ -176,13 +187,151 @@ public class Main {
                     scanner.nextLine();
                     break;
                 case 4:
-                    System.out.println("opc4 ");
+                    int optOp = -1;
+                    while (true) {
+                        System.out.print("**************************************************************\n");
+                        System.out.print("**                 MENÚ TIPOS DE OPERADORES                 **\n");
+                        System.out.print("**************************************************************\n");
+                        System.out.print("**           1.   Aritméticos                               **\n");
+                        System.out.print("**           2.   Relacionales                              **\n");
+                        System.out.print("**           3.   Logicos                                   **\n");
+                        System.out.print("**           4.   Asignación                                **\n");
+                        System.out.print("**           5.   Incremento / Decremento                   **\n");
+                        System.out.print("**           0.   Retornar al Menu Principal                **\n");
+                        System.out.print("**************************************************************\n");
+                        System.out.print("Digita una opción: ");
+                        optOp = scanner.nextInt();
+                        scanner.nextLine();
+                        switch (optOp) {
+                            case 1:
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**                                ARITMÉTICOS                                ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("** Operador **     Ejemplo         **               Detalle                  ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**    +     ** Int suma = 31+4;    ** Suma dos operadores.Result:35          ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**    -     ** Int resta = 31-4;   ** Resta el segundo operador.Resul:27     ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**    *     ** Int multip = 31*4;  ** Multiplica dos operadores.Resul:124    ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**    /     ** Int dividir = 31/4; ** Divide un operador con otro.Result:7.7 ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                     ** Devuelve el resto de la divisiòn del   ** \n");
+                                System.out.print("**    %     ** Int modulo = 31%4;  ** del primer operador con el segundo.    ** \n");
+                                System.out.print("**          **                     ** Result:27.                             ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                break;
+                            case 2:
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**                                RELACIONALES                               ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("** Operador **     Ejemplo                **               Detalle           ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                            ** Comprueba si los valores de los ** \n");
+                                System.out.print("**    ==    ** boolean esIgual=(5==3);    ** dos operadores son iguales.     ** \n");
+                                System.out.print("**          **                            ** Result:false.                   ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                            ** Comprueba si los valores de los ** \n");
+                                System.out.print("**    !=    ** boolean noEsIgual=(5!=3);  ** dos operadores no son iguales.  ** \n");
+                                System.out.print("**          **                            ** Result:true.                    ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                            ** Comprueba si el valor del       ** \n");
+                                System.out.print("**    >     ** boolean mayor=(5>3);       ** primer operador el mayor que el ** \n");
+                                System.out.print("**          **                            ** segundo.Result:true.            ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                            ** Comprueba si el valor del       ** \n");
+                                System.out.print("**    <     ** boolean menor=(5<3);       ** primer operador el menor que el ** \n");
+                                System.out.print("**          **                            ** segundo.Result:false.           ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                            ** Comprueba si el valor del       ** \n");
+                                System.out.print("**    >=    ** boolean mayorOIgual=(5>=3);** primer operador el mayor o      ** \n");
+                                System.out.print("**          **                            ** igual al segundo.Result:true.   ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                            ** Comprueba si el valor del       ** \n");
+                                System.out.print("**    <=    ** boolean menorOIgual=(5>=3);** primer operador el menor o      ** \n");
+                                System.out.print("**          **                            ** igual al segundo.Result:false.  ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                break;
+                            case 3:
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**                                  LOGICOS                                  ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("** Operador **     Ejemplo                **               Detalle           ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                            ** Devuelve true si ambos          ** \n");
+                                System.out.print("**    &&    ** boolean resul=(5>3 && 3<4);** operadores son true.            ** \n");
+                                System.out.print("**          **                            ** Result:true.                    ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                            ** Devuelve true si almenos una    ** \n");
+                                System.out.print("**    ||    ** boolean resul=(5>3 || 3<4);** de ellas es true.               ** \n");
+                                System.out.print("**          **                            ** Result:true.                    ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                            ** Invierte el valor de un         ** \n");
+                                System.out.print("**    !     ** boolean resul= !(5>3);     ** operador booleano.              ** \n");
+                                System.out.print("**          **                            ** Result:.false.                  ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                break;
+                            case 4:
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**                                 ASIGNACIÓN                                ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("** Operador **     Ejemplo      **               Detalle                     ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                  ** Asigna el valor del operador derecho al   ** \n");
+                                System.out.print("**    =     ** Int a = 5;       ** operador izquierdo.                       ** \n");
+                                System.out.print("**          **                  **                                           ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                  ** Suma el Operador derecho al Operador      ** \n");
+                                System.out.print("**    +=    ** Int a=5; a+=3;   ** izquierdo y asigna el resultado al        ** \n");
+                                System.out.print("**          **                  ** operador izquierdo.Result:8.              ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                  ** Resta el Operador derecho al Operador     ** \n");
+                                System.out.print("**   -=     ** Int a=5; a-=3;   ** izquierdo y asigna el resultado al        ** \n");
+                                System.out.print("**          **                  ** operador izquierdo.Result:2.              ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                  ** Multiplica el Operador derecho al         ** \n");
+                                System.out.print("**   *=     ** Int a=5; a*=3;   ** Operador izquierdo y asigna el resultado  ** \n");
+                                System.out.print("**          **                  ** al operador izquierdo.Result:15.          ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                  ** Divide el Operador derecho al Operador    ** \n");
+                                System.out.print("**    /=    ** Int a=6; a/=3;   ** izquierdo y asigna el resultado al        ** \n");
+                                System.out.print("**          **                  ** operador izquierdo.Result:2.              ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                  ** Calcula el modulo del Operador derecho    ** \n");
+                                System.out.print("**    %=    ** Int a=5; a%=3;   ** al Operador izquierdo y asigna el         ** \n");
+                                System.out.print("**          **                  ** resultado al operador izquierdo.Result:2. ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                break;
+                            case 5:
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**                           INCREMENTO/DECREMENTO                           ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("** Operador **     Ejemplo        **               Detalle                   ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                    ** Incrementa el valor del operador en 1.  ** \n");
+                                System.out.print("**    ++    ** Int a =5; a++;     ** Result:6.                               ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                System.out.print("**          **                    ** Decrementa el valor del operador en 1   ** \n");
+                                System.out.print("**    --    ** Int a =5; a--;     ** Result:4.                               ** \n");
+                                System.out.print("******************************************************************************* \n");
+                                break;
+                            case 0:
+                                System.out.println("Retornando al Menú Principal");
+                                break;
+                            default:
+                                System.out.println("Opción no válida. Ingresa una opción entre el 0 y 5");
+                        }
+                        System.out.print("Presiona Enter para continuar...");
+                        scanner.nextLine();
+                        break;
+                    }
                     break;
                 case 5:
                     int condif = -1;
                     while (true) {
                         System.out.print("**************************************************************\n");
-                        System.out.print("**                    IF, ELSE IF Y ELSE                    **\n");
+                        System.out.print("**                  MENÚ IF, ELSE IF Y ELSE                 **\n");
                         System.out.print("**************************************************************\n");
                         System.out.print("**           1.   Condicional IF                            **\n");
                         System.out.print("**           2.   Condicional ELSE                          **\n");
@@ -288,7 +437,7 @@ public class Main {
                     int ternaria = -1;
                     while (true) {
                         System.out.print("**************************************************************\n");
-                        System.out.print("**                         TERNARIA                         **\n");
+                        System.out.print("**                       MENÚ TERNARIA                      **\n");
                         System.out.print("**************************************************************\n");
                         System.out.print("**           1.   Condicional Ternaria                      **\n");
                         System.out.print("**           2.   Programa de Ternaria                      **\n");
@@ -349,7 +498,7 @@ public class Main {
                     int cond_while = -1;
                     while (true) {
                         System.out.print("**************************************************************\n");
-                        System.out.print("**                       BUCLE  WHILE                       **\n");
+                        System.out.print("**                     MENÚ BUCLE WHILE                     **\n");
                         System.out.print("**************************************************************\n");
                         System.out.print("**           1.   Condicional While                         **\n");
                         System.out.print("**           2.   Programa de While                         **\n");
