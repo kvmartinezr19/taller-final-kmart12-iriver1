@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -455,7 +456,8 @@ public class Main {
                                 System.out.print("**     el caso que corresponda.                             **\n");
                                 System.out.print("**   - Se puede utilizar la opciòn Deafault para cuando     **\n");
                                 System.out.print("**     no se encuentra el casodado.                         **\n");
-                                System.out.print("**   Este condicional es utilia la hora de definir por      **\n");
+                                System.out.print("**                                                          **\n");
+                                System.out.print("**   Este condicional es utilizado a la hora de definir por **\n");
                                 System.out.print("**   ejemplo un menu de usuario en aplicaciones que se      **\n");
                                 System.out.print("**   ejecutan por consola.                                  **\n");
                                 System.out.print("**                                                          **\n");
@@ -581,7 +583,65 @@ public class Main {
                     }
                     break;
                 case 8:
-                    System.out.println("opc8 ");
+                    int opDoW = -1;
+                    while (true) {
+                        System.out.print("**************************************************************\n");
+                        System.out.print("**                        DO WHILE                          **\n");
+                        System.out.print("**************************************************************\n");
+                        System.out.print("**           1.   Condicional Do While                      **\n");
+                        System.out.print("**           2.   Programa de Do While                      **\n");
+                        System.out.print("**           0.   Retornar al Menu Principal                **\n");
+                        System.out.print("**************************************************************\n");
+                        System.out.print("Digita una opción: ");
+                        opDoW = scanner.nextInt();
+                        scanner.nextLine();
+                        switch (opDoW) {
+                            case 1:
+                                System.out.print("**************************************************************\n");
+                                System.out.print("**                CONDICIONAL DO WHILE                      **\n");
+                                System.out.print("**************************************************************\n");
+                                System.out.print("**  La sentencia Do While en Java es una estructura de      **\n");
+                                System.out.print("**  control de ciclo que ejecuta un bloque de código una o  **\n");
+                                System.out.print("**  mas veces mientras se cumple una condición especifica.  **\n");
+                                System.out.print("**                                                          **\n");
+                                System.out.print("**  Este ciclo se utiliza cuando se desea garantizar que    **\n");
+                                System.out.print("**  el código se ejecute al menos una vez independiente     **\n");
+                                System.out.print("**  de si se cumple la condición.                           **\n");
+                                System.out.print("**                                                          **\n");
+                                System.out.print("**  Ejemplo:                                                **\n");
+                                System.out.print("**   do{                                                    **\n");
+                                System.out.print("**    //Bloque de codigo que se ejecuta al menos una vez.   **\n");
+                                System.out.print("**   }While (Condicion);                                    **\n");
+                                System.out.print("**                                                          **\n");
+                                System.out.print("**************************************************************\n");
+                                break;
+                            case 2:
+                                System.out.print("**************************************************************\n");
+                                System.out.print("**                  PROGRAMA DO WHILE                       **\n");
+                                System.out.print("**************************************************************\n");
+                                System.out.print("**              Ejercicio Adivina el número                 **\n");
+                                System.out.print("** Bienvenid@, vamos a jugar a adivinar el numero...        **\n");
+                                System.out.print("** ¡Hemos pensado en un numero de 1 a 100!                  **\n");
+                                Random random = new Random();
+                                int secreto= random.nextInt(100)+1;
+                                int intentos =0;
+                                int contador = 0;
+                                System.out.print("** Intenta adivinarlo.....                                  **\n");
+
+
+
+                                System.out.print("**************************************************************\n");
+                                break;
+                            case 0:
+                                System.out.println("Retornando al Menú Principal");
+                                break;
+                            default:
+                                System.out.println("Opción no válida. Ingresa una opción entre el 0 y 2");
+                        }
+                        System.out.print("Presiona Enter para continuar...");
+                        scanner.nextLine();
+                        break;
+                    }
                     break;
                 case 9:
                     int cond_while = -1;
