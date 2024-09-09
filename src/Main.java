@@ -139,7 +139,8 @@ public class Main {
                                 System.out.print("**  Almacena valores de verdad                              **\n");
                                 System.out.print("**  Rango: true o false                                     **\n");
                                 System.out.print("**  Ejemplo:                                                **\n");
-                                System.out.print("**             'boolean esMayorDeEdad = true;'              **\n");
+                                System.out.print("**             'boolean esMayorDeEdad = true;'            " +
+                                        "  **\n");
                                 System.out.print("**************************************************************\n");
                                 break;
                             case 0:
