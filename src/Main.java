@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -432,7 +433,97 @@ public class Main {
                     }
                     break;
                 case 6:
-                    System.out.println("opc6 ");
+                    int opSw = -1;
+                    while (true) {
+                        System.out.print("**************************************************************\n");
+                        System.out.print("**              CONDICIONALES SWITCH                        **\n");
+                        System.out.print("**************************************************************\n");
+                        System.out.print("**           1.   Condicional Switch                        **\n");
+                        System.out.print("**           2.   Programa de Switch                        **\n");
+                        System.out.print("**           0.   Retornar al Menu Principal                **\n");
+                        System.out.print("**************************************************************\n");
+                        System.out.print("Digita una opción: ");
+                        opSw = scanner.nextInt();
+                        scanner.nextLine();
+                        switch (opSw) {
+                            case 1:
+                                System.out.print("**************************************************************\n");
+                                System.out.print("**                   CONDICIONAL SHITCH                     **\n");
+                                System.out.print("**************************************************************\n");
+                                System.out.print("**  El condicional swich case es una estructura que evalua  **\n");
+                                System.out.print("**  mas de un caso y es caracterizada por:                  **\n");
+                                System.out.print("**   - Seleccion de una opcion entre varias.                **\n");
+                                System.out.print("**   - Switch recibe un ´caso´ y lo evalua hasta encontrar  **\n");
+                                System.out.print("**     el caso que corresponda.                             **\n");
+                                System.out.print("**   - Se puede utilizar la opciòn Deafault para cuando     **\n");
+                                System.out.print("**     no se encuentra el casodado.                         **\n");
+                                System.out.print("**                                                          **\n");
+                                System.out.print("**   Este condicional es utilizado a la hora de definir por **\n");
+                                System.out.print("**   ejemplo un menu de usuario en aplicaciones que se      **\n");
+                                System.out.print("**   ejecutan por consola.                                  **\n");
+                                System.out.print("**                                                          **\n");
+                                System.out.print("**   Ejemplo:                                               **\n");
+                                System.out.print("**   switch (expresiòn){                                    **\n");
+                                System.out.print("**   case valor1:                                           **\n");
+                                System.out.print("**   //código a ejecutar si expresion == valor1             **\n");
+                                System.out.print("**   break;                                                 **\n");
+                                System.out.print("**   case valor2:                                           **\n");
+                                System.out.print("**   //código a ejecutar si expresion == valor2             **\n");
+                                System.out.print("**   break;                                                 **\n");
+                                System.out.print("**   case valor3:                                           **\n");
+                                System.out.print("**   //código a ejecutar si expresion == valor3             **\n");
+                                System.out.print("**   break;                                                 **\n");
+                                System.out.print("**   //puede tener mas condiciones segun sea necesario      **\n");
+                                System.out.print("**   default:                                               **\n");
+                                System.out.print("**   // codigo a ejecutar si ninguno de los casos coincide. **\n");
+                                System.out.print("**                                                          **\n");
+                                System.out.print("**************************************************************\n");
+                                break;
+                            case 2:
+                                System.out.print("**************************************************************\n");
+                                System.out.print("**                     PROGRAMA SWITCH                      **\n");
+                                System.out.print("**************************************************************\n");
+                                System.out.print("**   Ejercicio saber el estado de su calificaciòn           **\n");
+                                System.out.print("** Por favor ingresa tu calificaciòn:                       **\n");
+                                int calificacion = scanner.nextInt();
+                                switch (calificacion) {
+                                    case 1:
+                                    case 2:
+                                        System.out.println("Su calificación es: F");
+                                        break;
+                                    case 3:
+                                    case 4:
+                                        System.out.println("Su calificación es: D");
+                                        break;
+                                    case 5:
+                                    case 6:
+                                        System.out.println("Su calificación es: C");
+                                        break;
+                                    case 7:
+                                    case 8:
+                                        System.out.println("Su calificación es: B");
+                                        break;
+                                    case 9:
+                                    case 10:
+                                        System.out.println("Su calificación es: A");
+                                        break;
+                                    default:
+                                        System.out.println("Su calificación no es válida, por favor verifique");
+                                        break;
+                                }
+                                scanner.nextLine();
+                                System.out.print("**************************************************************\n");
+                                break;
+                            case 0:
+                                System.out.println("Retornando al Menú Principal");
+                                break;
+                            default:
+                                System.out.println("Opción no válida. Ingresa una opción entre el 0 y 2");
+                        }
+                        System.out.print("Presiona Enter para continuar...");
+                        scanner.nextLine();
+                        break;
+                    }
                     break;
                 case 7:
                     int ternaria = -1;
@@ -493,7 +584,76 @@ public class Main {
                     }
                     break;
                 case 8:
-                    System.out.println("opc8 ");
+                    int opDoW = -1;
+                    while (true) {
+                        System.out.print("**************************************************************\n");
+                        System.out.print("**                        DO WHILE                          **\n");
+                        System.out.print("**************************************************************\n");
+                        System.out.print("**           1.   Condicional Do While                      **\n");
+                        System.out.print("**           2.   Programa de Do While                      **\n");
+                        System.out.print("**           0.   Retornar al Menu Principal                **\n");
+                        System.out.print("**************************************************************\n");
+                        System.out.print("Digita una opción: ");
+                        opDoW = scanner.nextInt();
+                        scanner.nextLine();
+                        switch (opDoW) {
+                            case 1:
+                                System.out.print("**************************************************************\n");
+                                System.out.print("**                CONDICIONAL DO WHILE                      **\n");
+                                System.out.print("**************************************************************\n");
+                                System.out.print("**  La sentencia Do While en Java es una estructura de      **\n");
+                                System.out.print("**  control de ciclo que ejecuta un bloque de código una o  **\n");
+                                System.out.print("**  mas veces mientras se cumple una condición especifica.  **\n");
+                                System.out.print("**                                                          **\n");
+                                System.out.print("**  Este ciclo se utiliza cuando se desea garantizar que    **\n");
+                                System.out.print("**  el código se ejecute al menos una vez independiente     **\n");
+                                System.out.print("**  de si se cumple la condición.                           **\n");
+                                System.out.print("**                                                          **\n");
+                                System.out.print("**  Ejemplo:                                                **\n");
+                                System.out.print("**   do{                                                    **\n");
+                                System.out.print("**    //Bloque de codigo que se ejecuta al menos una vez.   **\n");
+                                System.out.print("**   }While (Condicion);                                    **\n");
+                                System.out.print("**                                                          **\n");
+                                System.out.print("**************************************************************\n");
+                                break;
+                            case 2:
+                                System.out.print("**************************************************************\n");
+                                System.out.print("**                  PROGRAMA DO WHILE                       **\n");
+                                System.out.print("**************************************************************\n");
+                                System.out.print("**              Ejercicio Adivina el número                 **\n");
+                                System.out.print("** Bienvenid@, vamos a jugar a adivinar el numero...        **\n");
+                                System.out.print("** ¡Hemos pensado en un numero de 1 a 100!                  **\n");
+                                Random random = new Random();
+                                int secreto= random.nextInt(100)+1;
+                                int numeroi =0;
+                                boolean numero= false;
+                                System.out.print("** Intenta adivinarlo.....                                  **\n");
+                                do{
+                                System.out.print("** Introduce un número por favor                            **\n");
+                                    numeroi= scanner.nextInt();
+                                    if(numeroi < secreto){
+                                System.out.print("** Muy bajo, Intenta de nuevo.                              **\n");
+                                    } else if (numeroi > secreto) {
+                                System.out.print("** Muy alto, Intenta de nuevo.                              **\n");
+                                    } else {
+                                System.out.print("**¡Felicidades! adivinaste el numero es:" + secreto +        "\n");
+                                scanner.nextLine();
+                                numero= true;
+                                    }
+                                } while (!numero);
+                                System.out.print("**************************************************************\n");
+                                scanner.nextLine();
+                                break;
+                            case 0:
+                                System.out.println("Retornando al Menú Principal");
+                                break;
+                            default:
+                                System.out.println("Opción no válida. Ingresa una opción entre el 0 y 2");
+                        }
+                        System.out.print("Presiona Enter para continuar...");
+                        scanner.nextLine();
+                        break;
+                    }
                     break;
                 case 9:
                     int cond_while = -1;
@@ -554,9 +714,59 @@ public class Main {
                     }
                     break;
                 case 10:
-                    System.out.println("opc10 ");
+                    int opFor = -1;
+                    while (true) {
+                    System.out.print("**************************************************************\n");
+                    System.out.print("**                           FOR                            **\n");
+                    System.out.print("**************************************************************\n");
+                    System.out.print("**           1.   Condicional FOR                           **\n");
+                    System.out.print("**           2.   Programa de FOR                           **\n");
+                    System.out.print("**           0.   Retornar al Menu Principal                **\n");
+                    System.out.print("**************************************************************\n");
+                    System.out.print("Digita una opción: ");
+                    opFor = scanner.nextInt();
+                    scanner.nextLine();
+                    switch (opFor) {
+                        case 1:
+                            System.out.print("**************************************************************\n");
+                            System.out.print("**                   CONDICIONAL FOR                        **\n");
+                            System.out.print("**************************************************************\n");
+                            System.out.print("** la sentencia for en java es una estructura de control    **\n");
+                            System.out.print("** de ciclo que se utiliza para ejecutar un bloque de       **\n");
+                            System.out.print("** codigo una cantidad determinada de veces.                **\n");
+                            System.out.print("**                                                          **\n");
+                            System.out.print("**  Ejemplo:                                                **\n");
+                            System.out.print("**   for (inicialización; condición; actualización){        **\n");
+                            System.out.print("**     //Bloque de codigo a ejecutar                        **\n");
+                            System.out.print("**    }                                                     **\n");
+                            System.out.print("**************************************************************\n");
+                            break;
+                        case 2:
+                            System.out.print("**************************************************************\n");
+                            System.out.print("**                      PROGRAMA FOR                        **\n");
+                            System.out.print("**************************************************************\n");
+                            System.out.print("**              Ejercicio sumatoria de numeros              **\n");
+                            System.out.print("** Ingresa un numero para realizar la sumatoria:            **\n");
+                            int numero= scanner.nextInt();
+                            int suma = 0;
+                            for (int i= 1; i<=numero; i++){
+                                suma += i;
+                            }
+                            System.out.print("** La suma del 1 al:" + numero + "es: " +  suma  +           "\n");
+                            System.out.print("**************************************************************\n");
+                            scanner.nextLine();
+                            break;
+                        case 0:
+                            System.out.println("Retornando al Menú Principal");
+                            break;
+                        default:
+                            System.out.println("Opción no válida. Ingresa una opción entre el 0 y 2");
+                    }
+                    System.out.print("Presiona Enter para continuar...");
+                    scanner.nextLine();
                     break;
-                default:
+                }
+                  default:
                     System.out.println("Opción no válida. Ingresa una opción entre el 0 y 10");
             }
         } while (opc != 0);
