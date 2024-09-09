@@ -150,7 +150,7 @@ public class Main {
                             default:
                                 System.out.println("Opción no válida. Ingresa una opción entre el 0 y 8");
                         }
-                        System.out.print("Presiona 'Enter' para continuar 151...");
+                        System.out.print("Presiona 'Enter' para continuar...");
                         scanner.nextLine();
                         break;
                     }
@@ -427,7 +427,7 @@ public class Main {
                             default:
                                 System.out.println("Opción no válida. Ingresa una opción entre el 0 y 4");
                         }
-                        System.out.print("Presiona 'Enter' para continuar 279...");
+                        System.out.print("Presiona 'Enter' para continuar...");
                         scanner.nextLine();
                         break;
                     }
@@ -636,7 +636,7 @@ public class Main {
                                     } else if (numeroi > secreto) {
                                 System.out.print("** Muy alto, Intenta de nuevo.                              **\n");
                                     } else {
-                                System.out.print("**¡Felicidades! adivinaste el numero es:" + secreto +        "\n");
+                                System.out.print("**¡Felicidades! adivinaste el numero es: " + secreto +        "\n");
                                 scanner.nextLine();
                                 numero= true;
                                     }
@@ -708,7 +708,7 @@ public class Main {
                             default:
                                 System.out.println("Opción no válida. Ingresa una opción entre el 0 y 2");
                         }
-                        System.out.print("Presiona 'Enter' para continuar 401...");
+                        System.out.print("Presiona 'Enter' para continuar...");
                         scanner.nextLine();
                         break;
                     }
@@ -731,7 +731,7 @@ public class Main {
                             System.out.print("**************************************************************\n");
                             System.out.print("**                   CONDICIONAL FOR                        **\n");
                             System.out.print("**************************************************************\n");
-                            System.out.print("** la sentencia for en java es una estructura de control    **\n");
+                            System.out.print("** La sentencia for en java es una estructura de control    **\n");
                             System.out.print("** de ciclo que se utiliza para ejecutar un bloque de       **\n");
                             System.out.print("** codigo una cantidad determinada de veces.                **\n");
                             System.out.print("**                                                          **\n");
@@ -752,7 +752,7 @@ public class Main {
                             for (int i= 1; i<=numero; i++){
                                 suma += i;
                             }
-                            System.out.print("** La suma del 1 al:" + numero + "es: " +  suma  +           "\n");
+                            System.out.print("** La suma del 1 al " + numero + " es: " +  suma  +           "\n");
                             System.out.print("**************************************************************\n");
                             scanner.nextLine();
                             break;
