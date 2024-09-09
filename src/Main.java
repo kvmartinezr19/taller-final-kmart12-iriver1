@@ -624,15 +624,15 @@ public class Main {
                                 System.out.print("** ¡Hemos pensado en un numero de 1 a 100!                  **\n");
                                 Random random = new Random();
                                 int secreto= random.nextInt(100)+1;
-                                int intento =10;
+                                int numeroi =0;
                                 boolean numero= false;
                                 System.out.print("** Intenta adivinarlo.....                                  **\n");
                                 do{
                                 System.out.print("** Introduce un número por favor                            **\n");
-                                    intento= scanner.nextInt();
-                                    if(intento < secreto){
+                                    numeroi= scanner.nextInt();
+                                    if(numeroi < secreto){
                                 System.out.print("** Muy bajo, Intenta de nuevo.                              **\n");
-                                    } else if (intento > secreto) {
+                                    } else if (numeroi > secreto) {
                                 System.out.print("** Muy alto, Intenta de nuevo.                              **\n");
                                     } else {
                                 System.out.print("**¡Felicidades! adivinaste el numero es:" + secreto +        "\n");
@@ -640,7 +640,6 @@ public class Main {
                                 numero= true;
                                     }
                                 } while (!numero);
-
                                 System.out.print("**************************************************************\n");
                                 scanner.nextLine();
                                 break;
@@ -766,8 +765,7 @@ public class Main {
                     scanner.nextLine();
                     break;
                 }
-                break;
-                default:
+                  default:
                     System.out.println("Opción no válida. Ingresa una opción entre el 0 y 10");
             }
             System.out.print("Presiona Enter para continuar...");
