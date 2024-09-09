@@ -11,26 +11,26 @@ public class Main {
 
         do {
             System.out.print("**************************************************************\n");
-            System.out.print("**                       MENU PRINCIPAL                     **\n");
-            System.out.print("**                 CAPITULO DE PROGRAMACION                 **\n");
+            System.out.print("**                       MENÚ PRINCIPAL                     **\n");
+            System.out.print("**                 CAPÍTULO DE PROGRAMACIÓN                 **\n");
             System.out.print("**            KATHERINE MARTINEZ - LORENA RIVERA            **\n");
-            System.out.print("**                     KMART12 - IRIVER1                    **\n");
+            System.out.print("**                       KMART12 - IRIVER1                  **\n");
             System.out.print("**************************************************************\n");
             System.out.print("**************************************************************\n");
             System.out.print("**        1.   Datos Primitivos                             **\n");
             System.out.print("**        2.   String                                       **\n");
             System.out.print("**        3.   Constantes                                   **\n");
-            System.out.print("**        4.   Tipo de Operadores                           **\n");
+            System.out.print("**        4.   Tipos de Operadores                          **\n");
             System.out.print("**        5.   Condicional IF, ELSE, IF ELSE                **\n");
-            System.out.print("**        6.   Condicional Swicht                           **\n");
-            System.out.print("**        7.   Condicional Ternaria                         **\n");
+            System.out.print("**        6.   Condicional SWITCH                           **\n");
+            System.out.print("**        7.   Condicional TERNARIA                         **\n");
             System.out.print("**        8.   Bucle DO WHILE                               **\n");
             System.out.print("**        9.   Bucle WHILE                                  **\n");
             System.out.print("**        10.  Bucle FOR                                    **\n");
             System.out.print("**        0.   Salir                                        **\n");
             System.out.print("**************************************************************\n");
             System.out.print("**************************************************************\n");
-            System.out.print("Digita la opción de tu preferencia: ");
+            System.out.print("Selecciona una opción del menú principal: ");
             opc = scanner.nextInt();
             scanner.nextLine();
 
@@ -42,7 +42,7 @@ public class Main {
                     int dprim = -1;
                     while (true) {
                         System.out.print("**************************************************************\n");
-                        System.out.print("**                  MENU DATOS PRIMITIVOS                   **\n");
+                        System.out.print("**                  MENÚ DATOS PRIMITIVOS                   **\n");
                         System.out.print("**************************************************************\n");
                         System.out.print("**           1.   ¿Qué es un byte?                          **\n");
                         System.out.print("**           2.   ¿Qué es un short?                         **\n");
@@ -52,7 +52,7 @@ public class Main {
                         System.out.print("**           6.   ¿Qué es un double?                        **\n");
                         System.out.print("**           7.   ¿Qué es un char?                          **\n");
                         System.out.print("**           8.   ¿Qué es un boolean?                       **\n");
-                        System.out.print("**           0.   Retornar al Menu Principal                **\n");
+                        System.out.print("**           0.   Retornar al Menú Principal                **\n");
                         System.out.print("**************************************************************\n");
                         System.out.print("Digita una opción: ");
                         dprim = scanner.nextInt();
@@ -60,7 +60,7 @@ public class Main {
                         switch (dprim) {
                             case 1:
                                 System.out.print("**************************************************************\n");
-                                System.out.print("**                     ¿QUE ES UN BYTE?                     **\n");
+                                System.out.print("**                     ¿QUÉ ES UN BYTE?                     **\n");
                                 System.out.print("**************************************************************\n");
                                 System.out.print("**  Es utilizado para datos pequeños y optimización de      **\n");
                                 System.out.print("**  memoria en arrays grandes.                              **\n");
@@ -71,7 +71,7 @@ public class Main {
                                 break;
                             case 2:
                                 System.out.print("**************************************************************\n");
-                                System.out.print("**                     ¿QUE ES UN SHORT?                    **\n");
+                                System.out.print("**                     ¿QUÉ ES UN SHORT?                    **\n");
                                 System.out.print("**************************************************************\n");
                                 System.out.print("**  Es útil para datos numéricos mas grandes que 'byte'     **\n");
                                 System.out.print("**  pero aún pequeños.                                      **\n");
@@ -82,7 +82,7 @@ public class Main {
                                 break;
                             case 3:
                                 System.out.print("**************************************************************\n");
-                                System.out.print("**                      ¿QUE ES UN INT?                     **\n");
+                                System.out.print("**                      ¿QUÉ ES UN INT?                     **\n");
                                 System.out.print("**************************************************************\n");
                                 System.out.print("**  Este tipo de dato se utiliza para almacenar números     **\n");
                                 System.out.print("**  enteros, es decir, números sin parte decimal.           **\n");
@@ -93,7 +93,7 @@ public class Main {
                                 break;
                             case 4:
                                 System.out.print("**************************************************************\n");
-                                System.out.print("**                     ¿QUE ES UN LONG?                     **\n");
+                                System.out.print("**                     ¿QUÉ ES UN LONG?                     **\n");
                                 System.out.print("**************************************************************\n");
                                 System.out.print("**  Las variables de tipo entero grandes o long son         **\n");
                                 System.out.print("**  aquellas que almacenan un número (ya sea positivo o     **\n");
@@ -105,7 +105,7 @@ public class Main {
                                 break;
                             case 5:
                                 System.out.print("**************************************************************\n");
-                                System.out.print("**                     ¿QUE ES UN FLOAT?                    **\n");
+                                System.out.print("**                     ¿QUÉ ES UN FLOAT?                    **\n");
                                 System.out.print("**************************************************************\n");
                                 System.out.print("**  Números en coma flotante de precision simple            **\n");
                                 System.out.print("**  Rango: 3,4E-38 a 3,4E+38                                **\n");
@@ -115,7 +115,7 @@ public class Main {
                                 break;
                             case 6:
                                 System.out.print("**************************************************************\n");
-                                System.out.print("**                    ¿QUE ES UN DOUBLE?                    **\n");
+                                System.out.print("**                    ¿QUÉ ES UN DOUBLE?                    **\n");
                                 System.out.print("**************************************************************\n");
                                 System.out.print("**  Números en coma flotante de doble precision             **\n");
                                 System.out.print("**  Rango: ±4,9E-324 a ±1,79769313486231570E+308            **\n");
@@ -125,7 +125,7 @@ public class Main {
                                 break;
                             case 7:
                                 System.out.print("**************************************************************\n");
-                                System.out.print("**                     ¿QUE ES UN CHAR?                     **\n");
+                                System.out.print("**                     ¿QUÉ ES UN CHAR?                     **\n");
                                 System.out.print("**************************************************************\n");
                                 System.out.print("**  Almacena un solo carácter unicode                       **\n");
                                 System.out.print("**  Rango: 0 a 65,535 (Caracteres Unicode)                  **\n");
@@ -135,7 +135,7 @@ public class Main {
                                 break;
                             case 8:
                                 System.out.print("**************************************************************\n");
-                                System.out.print("**                   ¿QUE ES UN BOOLEAN?                    **\n");
+                                System.out.print("**                   ¿QUÉ ES UN BOOLEAN?                    **\n");
                                 System.out.print("**************************************************************\n");
                                 System.out.print("**  Almacena valores de verdad                              **\n");
                                 System.out.print("**  Rango: true o false                                     **\n");
@@ -149,17 +149,17 @@ public class Main {
                             default:
                                 System.out.println("Opción no válida. Ingresa una opción entre el 0 y 8");
                         }
-                        System.out.print("Presiona Enter para continuar...");
+                        System.out.print("Presiona 'Enter' para continuar 151...");
                         scanner.nextLine();
                         break;
                     }
                     break;
                 case 2:
                     System.out.print("**************************************************************\n");
-                    System.out.print("**                        STRING                            **\n");
+                    System.out.print("**                          STRING                          **\n");
                     System.out.print("**************************************************************\n");
                     System.out.print("**  En Java, los string son un objeto el cual nos permite   **\n");
-                    System.out.print("**  almacenar muchos caracteres                             **\n");
+                    System.out.print("**  almacenar muchos caracteres.                            **\n");
                     System.out.print("**                                                          **\n");
                     System.out.print("**  Por ejemplo:                                            **\n");
                     System.out.print("**     String mensaje = `Hola Mundo`;                       **\n");
@@ -191,12 +191,12 @@ public class Main {
                     int optOp = -1;
                     while (true) {
                         System.out.print("**************************************************************\n");
-                        System.out.print("**                    MENU TIPO DE OPERADORES               **\n");
+                        System.out.print("**                 MENÚ TIPOS DE OPERADORES                 **\n");
                         System.out.print("**************************************************************\n");
-                        System.out.print("**           1.   Aritmèticos                               **\n");
+                        System.out.print("**           1.   Aritméticos                               **\n");
                         System.out.print("**           2.   Relacionales                              **\n");
                         System.out.print("**           3.   Logicos                                   **\n");
-                        System.out.print("**           4.   Asignaciòn                                **\n");
+                        System.out.print("**           4.   Asignación                                **\n");
                         System.out.print("**           5.   Incremento / Decremento                   **\n");
                         System.out.print("**           0.   Retornar al Menu Principal                **\n");
                         System.out.print("**************************************************************\n");
@@ -206,7 +206,7 @@ public class Main {
                         switch (optOp) {
                             case 1:
                                 System.out.print("******************************************************************************* \n");
-                                System.out.print("**                           ARITMETICOS                                     ** \n");
+                                System.out.print("**                                ARITMÉTICOS                                ** \n");
                                 System.out.print("******************************************************************************* \n");
                                 System.out.print("** Operador **     Ejemplo         **               Detalle                  ** \n");
                                 System.out.print("******************************************************************************* \n");
@@ -225,7 +225,7 @@ public class Main {
                                 break;
                             case 2:
                                 System.out.print("******************************************************************************* \n");
-                                System.out.print("**                           RELACIONALES                                    ** \n");
+                                System.out.print("**                                RELACIONALES                               ** \n");
                                 System.out.print("******************************************************************************* \n");
                                 System.out.print("** Operador **     Ejemplo                **               Detalle           ** \n");
                                 System.out.print("******************************************************************************* \n");
@@ -256,7 +256,7 @@ public class Main {
                                 break;
                             case 3:
                                 System.out.print("******************************************************************************* \n");
-                                System.out.print("**                           LOGICOS                                         ** \n");
+                                System.out.print("**                                  LOGICOS                                  ** \n");
                                 System.out.print("******************************************************************************* \n");
                                 System.out.print("** Operador **     Ejemplo                **               Detalle           ** \n");
                                 System.out.print("******************************************************************************* \n");
@@ -275,7 +275,7 @@ public class Main {
                                 break;
                             case 4:
                                 System.out.print("******************************************************************************* \n");
-                                System.out.print("**                           ASIGNACION                                      ** \n");
+                                System.out.print("**                                 ASIGNACIÓN                                ** \n");
                                 System.out.print("******************************************************************************* \n");
                                 System.out.print("** Operador **     Ejemplo      **               Detalle                     ** \n");
                                 System.out.print("******************************************************************************* \n");
@@ -306,7 +306,7 @@ public class Main {
                                 break;
                             case 5:
                                 System.out.print("******************************************************************************* \n");
-                                System.out.print("**                   INCREMENTO/DECREMENTO                                   ** \n");
+                                System.out.print("**                           INCREMENTO/DECREMENTO                           ** \n");
                                 System.out.print("******************************************************************************* \n");
                                 System.out.print("** Operador **     Ejemplo        **               Detalle                   ** \n");
                                 System.out.print("******************************************************************************* \n");
@@ -332,7 +332,7 @@ public class Main {
                     int condif = -1;
                     while (true) {
                         System.out.print("**************************************************************\n");
-                        System.out.print("**                    IF, ELSE IF Y ELSE                    **\n");
+                        System.out.print("**                  MENÚ IF, ELSE IF Y ELSE                 **\n");
                         System.out.print("**************************************************************\n");
                         System.out.print("**           1.   Condicional IF                            **\n");
                         System.out.print("**           2.   Condicional ELSE                          **\n");
@@ -426,7 +426,7 @@ public class Main {
                             default:
                                 System.out.println("Opción no válida. Ingresa una opción entre el 0 y 4");
                         }
-                        System.out.print("Presiona Enter para continuar...");
+                        System.out.print("Presiona 'Enter' para continuar 279...");
                         scanner.nextLine();
                         break;
                     }
@@ -528,7 +528,7 @@ public class Main {
                     int ternaria = -1;
                     while (true) {
                         System.out.print("**************************************************************\n");
-                        System.out.print("**                         TERNARIA                         **\n");
+                        System.out.print("**                       MENÚ TERNARIA                      **\n");
                         System.out.print("**************************************************************\n");
                         System.out.print("**           1.   Condicional Ternaria                      **\n");
                         System.out.print("**           2.   Programa de Ternaria                      **\n");
@@ -564,10 +564,10 @@ public class Main {
                                 System.out.print("**                     PROGRAMA TERNARIA                    **\n");
                                 System.out.print("**************************************************************\n");
                                 System.out.print("**   Ejercicio para calcular si un número es par o impar    **\n");
-                                System.out.print("** Ingresa un numero:                                       **\n");
+                                System.out.print("** Ingresa un número:                                       **\n");
                                 int numero = scanner.nextInt();
                                 String resultado = (numero % 2 == 0 ) ? "Par":"Impar";
-                                System.out.println("El numero " + numero + " es: " +resultado);
+                                System.out.println("El número " + numero + " es: " +resultado);
                                 scanner.nextLine();
                                 System.out.print("**************************************************************\n");
                                 break;
@@ -658,7 +658,7 @@ public class Main {
                     int cond_while = -1;
                     while (true) {
                         System.out.print("**************************************************************\n");
-                        System.out.print("**                           WHILE                          **\n");
+                        System.out.print("**                     MENÚ BUCLE WHILE                     **\n");
                         System.out.print("**************************************************************\n");
                         System.out.print("**           1.   Condicional While                         **\n");
                         System.out.print("**           2.   Programa de While                         **\n");
@@ -687,8 +687,8 @@ public class Main {
                                 System.out.print("**************************************************************\n");
                                 System.out.print("**                      PROGRAMA WHILE                      **\n");
                                 System.out.print("**************************************************************\n");
-                                System.out.print("**              Ejercicio sumatoria de numeros              **\n");
-                                System.out.print("** Ingresa un numero para realizar la sumatoria:            **\n");
+                                System.out.print("**              Ejercicio sumatoria de números              **\n");
+                                System.out.print("** Ingresa un número para realizar la sumatoria:            **\n");
                                 int i = 0;
                                 int numero = scanner.nextInt();
                                 int suma = 0;
@@ -707,7 +707,7 @@ public class Main {
                             default:
                                 System.out.println("Opción no válida. Ingresa una opción entre el 0 y 2");
                         }
-                        System.out.print("Presiona Enter para continuar...");
+                        System.out.print("Presiona 'Enter' para continuar 401...");
                         scanner.nextLine();
                         break;
                     }
@@ -768,8 +768,6 @@ public class Main {
                   default:
                     System.out.println("Opción no válida. Ingresa una opción entre el 0 y 10");
             }
-            System.out.print("Presiona Enter para continuar...");
-            scanner.nextLine();
         } while (opc != 0);
         scanner.close();
     }
