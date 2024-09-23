@@ -1,3 +1,11 @@
+package ejecucion;
+
+import explicaciones.Detalle;
+import menus.MenuPrincipal;
+import menus.SubMenu;
+import programas.Programas;
+import utilidades.Validaciones;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -7,142 +15,51 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int opc = -1;
+        int opcion = -1;
 
         do {
-            System.out.print("**************************************************************\n");
-            System.out.print("**                       MENÚ PRINCIPAL                     **\n");
-            System.out.print("**                 CAPÍTULO DE PROGRAMACIÓN                 **\n");
-            System.out.print("**            KATHERINE MARTINEZ - LORENA RIVERA            **\n");
-            System.out.print("**                       KMART12 - IRIVER1                  **\n");
-            System.out.print("**************************************************************\n");
-            System.out.print("**************************************************************\n");
-            System.out.print("**        1.   Datos Primitivos                             **\n");
-            System.out.print("**        2.   String                                       **\n");
-            System.out.print("**        3.   Constantes                                   **\n");
-            System.out.print("**        4.   Tipos de Operadores                          **\n");
-            System.out.print("**        5.   Condicional IF, ELSE, IF ELSE                **\n");
-            System.out.print("**        6.   Condicional SWITCH                           **\n");
-            System.out.print("**        7.   Condicional TERNARIA                         **\n");
-            System.out.print("**        8.   Bucle DO WHILE                               **\n");
-            System.out.print("**        9.   Bucle WHILE                                  **\n");
-            System.out.print("**        10.  Bucle FOR                                    **\n");
-            System.out.print("**        0.   Salir                                        **\n");
-            System.out.print("**************************************************************\n");
-            System.out.print("**************************************************************\n");
-            System.out.print("Selecciona una opción del menú principal: ");
-            opc = scanner.nextInt();
-            scanner.nextLine();
+            MenuPrincipal.menuPrincipal();
+            Validaciones.opcionValida(scanner);
+            opcion = scanner.nextInt();
 
-            switch (opc) {
+            switch (opcion) {
                 case 0:
                     System.out.println("Saliendo del programa...");
                     break;
                 case 1:
-                    int dprim = -1;
-                    while (true) {
-                        System.out.print("**************************************************************\n");
-                        System.out.print("**                  MENÚ DATOS PRIMITIVOS                   **\n");
-                        System.out.print("**************************************************************\n");
-                        System.out.print("**           1.   ¿Qué es un byte?                          **\n");
-                        System.out.print("**           2.   ¿Qué es un short?                         **\n");
-                        System.out.print("**           3.   ¿Qué es un int?                           **\n");
-                        System.out.print("**           4.   ¿Qué es un long?                          **\n");
-                        System.out.print("**           5.   ¿Qué es un float?                         **\n");
-                        System.out.print("**           6.   ¿Qué es un double?                        **\n");
-                        System.out.print("**           7.   ¿Qué es un char?                          **\n");
-                        System.out.print("**           8.   ¿Qué es un boolean?                       **\n");
-                        System.out.print("**           0.   Retornar al Menú Principal                **\n");
-                        System.out.print("**************************************************************\n");
-                        System.out.print("Digita una opción: ");
-                        dprim = scanner.nextInt();
+                    int datosPrimitivos = -1;
+                    do {
+                        SubMenu.menuDatosPrimitivos();
+
+                        Validaciones.opcionValida(scanner);
+
+                        datosPrimitivos = scanner.nextInt();
                         scanner.nextLine();
-                        switch (dprim) {
+
+                        switch (datosPrimitivos) {
                             case 1:
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**                     ¿QUÉ ES UN BYTE?                     **\n");
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**  Es utilizado para datos pequeños y optimización de      **\n");
-                                System.out.print("**  memoria en arrays grandes.                              **\n");
-                                System.out.print("**  Rango: -128 a 127                                       **\n");
-                                System.out.print("**  Ejemplo:                                                **\n");
-                                System.out.print("**             'byte edad = 25;'                            **\n");
-                                System.out.print("**************************************************************\n");
+                                Detalle.explicacionByte();
                                 break;
                             case 2:
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**                     ¿QUÉ ES UN SHORT?                    **\n");
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**  Es útil para datos numéricos mas grandes que 'byte'     **\n");
-                                System.out.print("**  pero aún pequeños.                                      **\n");
-                                System.out.print("**  Rango: -32,768 a 32,767                                 **\n");
-                                System.out.print("**  Ejemplo:                                                **\n");
-                                System.out.print("**             'short año = 2023;'                          **\n");
-                                System.out.print("**************************************************************\n");
+                                Detalle.explicacionShort();
                                 break;
                             case 3:
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**                      ¿QUÉ ES UN INT?                     **\n");
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**  Este tipo de dato se utiliza para almacenar números     **\n");
-                                System.out.print("**  enteros, es decir, números sin parte decimal.           **\n");
-                                System.out.print("**  Rango: -2^31 y 2^31 - 1                                 **\n");
-                                System.out.print("**  Ejemplo:                                                **\n");
-                                System.out.print("**             'int auxiliar = 30;'                         **\n");
-                                System.out.print("**************************************************************\n");
+                                Detalle.explicacionInt();
                                 break;
                             case 4:
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**                     ¿QUÉ ES UN LONG?                     **\n");
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**  Las variables de tipo entero grandes o long son         **\n");
-                                System.out.print("**  aquellas que almacenan un número (ya sea positivo o     **\n");
-                                System.out.print("**  negativo) no decimal.                                   **\n");
-                                System.out.print("**  Rango: -2^63 y 2^63 - 1                                 **\n");
-                                System.out.print("**  Ejemplo:                                                **\n");
-                                System.out.print("**            'long numeroCuentas = 10000000000L;'          **\n");
-                                System.out.print("**************************************************************\n");
+                                Detalle.explicacionLong();
                                 break;
                             case 5:
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**                     ¿QUÉ ES UN FLOAT?                    **\n");
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**  Números en coma flotante de precision simple            **\n");
-                                System.out.print("**  Rango: 3,4E-38 a 3,4E+38                                **\n");
-                                System.out.print("**  Ejemplo:                                                **\n");
-                                System.out.print("**             'float precio = 19.99f;'                     **\n");
-                                System.out.print("**************************************************************\n");
+                                Detalle.explicacionFloat();
                                 break;
                             case 6:
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**                    ¿QUÉ ES UN DOUBLE?                    **\n");
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**  Números en coma flotante de doble precision             **\n");
-                                System.out.print("**  Rango: ±4,9E-324 a ±1,79769313486231570E+308            **\n");
-                                System.out.print("**  Ejemplo:                                                **\n");
-                                System.out.print("**             'double pi = 3.141592653589793;'             **\n");
-                                System.out.print("**************************************************************\n");
+                                Detalle.explicacionDouble();
                                 break;
                             case 7:
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**                     ¿QUÉ ES UN CHAR?                     **\n");
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**  Almacena un solo carácter unicode                       **\n");
-                                System.out.print("**  Rango: 0 a 65,535 (Caracteres Unicode)                  **\n");
-                                System.out.print("**  Ejemplo:                                                **\n");
-                                System.out.print("**             'char inicial = 'A';'                        **\n");
-                                System.out.print("**************************************************************\n");
+                                Detalle.explicacionChar();
                                 break;
                             case 8:
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**                   ¿QUÉ ES UN BOOLEAN?                    **\n");
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**  Almacena valores de verdad                              **\n");
-                                System.out.print("**  Rango: true o false                                     **\n");
-                                System.out.print("**  Ejemplo:                                                **\n");
-                                System.out.print("**             'boolean esMayorDeEdad = true;'            " +
-                                        "  **\n");
-                                System.out.print("**************************************************************\n");
+                                Detalle.explicacionBoolean();
                                 break;
                             case 0:
                                 System.out.println("Retornando al Menú Principal");
@@ -150,10 +67,8 @@ public class Main {
                             default:
                                 System.out.println("Opción no válida. Ingresa una opción entre el 0 y 8");
                         }
-                        System.out.print("Presiona 'Enter' para continuar...");
-                        scanner.nextLine();
-                        break;
-                    }
+                        Validaciones.accionContinuar(scanner);
+                    } while (datosPrimitivos != 0);
                     break;
                 case 2:
                     System.out.print("**************************************************************\n");
@@ -168,29 +83,14 @@ public class Main {
                     System.out.print("**************************************************************\n");
                     System.out.println("Presiona Enter para continuar...");
                     scanner.nextLine();
-                    break;
-                case 3:
-                    System.out.print("**************************************************************\n");
-                    System.out.print("**                        CONSTANTES                        **\n");
-                    System.out.print("**************************************************************\n");
-                    System.out.print("**  En Java, una constante es un valor que no cambia        **\n");
-                    System.out.print("**  durante la ejecución del programa.                      **\n");
-                    System.out.print("**  Las constantes se utilizan para representar valores     **\n");
-                    System.out.print("**  fijos y de lectura única, lo que ayuda a que el         **\n");
-                    System.out.print("**  código sea más legible y menos propenso a errores       **\n");
-                    System.out.print("**  Las constantes en Java se declaran usando la palabra    **\n");
-                    System.out.print("**  clave ~final~.                                          **\n");
-                    System.out.print("**                                                          **\n");
-                    System.out.print("**  Ejemplos:                                               **\n");
-                    System.out.print("**       public static final int TIEMPO_ESPERA = 30;        **\n");
-                    System.out.print("**       public static final boolean DEPURACION = true;     **\n");
-                    System.out.print("**************************************************************\n");
-                    System.out.println("Presiona Enter para continuar...");
                     scanner.nextLine();
                     break;
+                case 3:
+                    Detalle.constantes(scanner);
+                    break;
                 case 4:
-                    int optOp = -1;
-                    while (true) {
+                    int tipoOperadores = -1;
+                    do {
                         System.out.print("**************************************************************\n");
                         System.out.print("**                 MENÚ TIPOS DE OPERADORES                 **\n");
                         System.out.print("**************************************************************\n");
@@ -202,9 +102,12 @@ public class Main {
                         System.out.print("**           0.   Retornar al Menu Principal                **\n");
                         System.out.print("**************************************************************\n");
                         System.out.print("Digita una opción: ");
-                        optOp = scanner.nextInt();
+
+                        Validaciones.opcionValida(scanner);
+
+                        tipoOperadores = scanner.nextInt();
                         scanner.nextLine();
-                        switch (optOp) {
+                        switch (tipoOperadores) {
                             case 1:
                                 System.out.print("******************************************************************************* \n");
                                 System.out.print("**                                ARITMÉTICOS                                ** \n");
@@ -326,115 +229,43 @@ public class Main {
                         }
                         System.out.print("Presiona Enter para continuar...");
                         scanner.nextLine();
-                        break;
-                    }
+
+                    }while (tipoOperadores != 0);
                     break;
                 case 5:
-                    int condif = -1;
-                    while (true) {
-                        System.out.print("**************************************************************\n");
-                        System.out.print("**                  MENÚ IF, ELSE IF Y ELSE                 **\n");
-                        System.out.print("**************************************************************\n");
-                        System.out.print("**           1.   Condicional IF                            **\n");
-                        System.out.print("**           2.   Condicional ELSE                          **\n");
-                        System.out.print("**           3.   Condicional ELSE IF                       **\n");
-                        System.out.print("**           4.   Programa de IF, ELSE IF Y ELSE            **\n");
-                        System.out.print("**           0.   Retornar al Menu Principal                **\n");
-                        System.out.print("**************************************************************\n");
-                        System.out.print("Digita una opción: ");
-                        condif = scanner.nextInt();
+                    int condicionalIf = -1;
+                    do {
+                        SubMenu.menuIfElseIfElse();
+
+                        Validaciones.opcionValida(scanner);
+
+                        condicionalIf = scanner.nextInt();
                         scanner.nextLine();
-                        switch (condif) {
+                        switch (condicionalIf) {
                             case 1:
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**                      CONDICIONAL IF                      **\n");
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**  La estructura if evalúa una condición y ejecuta un      **\n");
-                                System.out.print("**  bloque de código si la condición es verdadera.          **\n");
-                                System.out.print("**                                                          **\n");
-                                System.out.print("**  Sintaxis:                                               **\n");
-                                System.out.print("**                                                          **\n");
-                                System.out.print("**  if (condición) {                                        **\n");
-                                System.out.print("**    //Código a ejecutar si la condición es verdadera      **\n");
-                                System.out.print("**  }                                                       **\n");
-                                System.out.print("**************************************************************\n");
+                                Detalle.explicacionIf();
                                 break;
                             case 2:
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**                     CONDICIONAL ELSE                     **\n");
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**  El condicional else se utiliza en combinación con if    **\n");
-                                System.out.print("**  para proporcionar un bloque de código que se ejecutará  **\n");
-                                System.out.print("**  cuando la condición del if no se cumpla. Es una forma   **\n");
-                                System.out.print("**  de manejar casos alternativos cuando la condición       **\n");
-                                System.out.print("**  principal no es verdadera.                              **\n");
-                                System.out.print("**                                                          **\n");
-                                System.out.print("**  Sintaxis:                                               **\n");
-                                System.out.print("**                                                          **\n");
-                                System.out.print("**  if (condición) {                                        **\n");
-                                System.out.print("**    //Código a ejecutar si la condición es verdadera      **\n");
-                                System.out.print("**  } else {                                                **\n");
-                                System.out.print("**    // Código a ejecutar si la condición es falsa         **\n");
-                                System.out.print("**  }                                                       **\n");
-                                System.out.print("**************************************************************\n");
+                                Detalle.explicacionElse();
                                 break;
                             case 3:
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**                   CONDICIONAL ELSE IF                    **\n");
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**  El condicional else if se usa para comprobar múltiples  **\n");
-                                System.out.print("**  condiciones en una secuencia de decisiones.             **\n");
-                                System.out.print("**  Permite evaluar varias condiciones, proporcionando      **\n");
-                                System.out.print("**  bloques de código específicos para cada una, y se       **\n");
-                                System.out.print("**  utiliza después de un if y antes de un else.            **\n");
-                                System.out.print("**                                                          **\n");
-                                System.out.print("**  Sintaxis:                                               **\n");
-                                System.out.print("**                                                          **\n");
-                                System.out.print("**  if (condición1) {                                       **\n");
-                                System.out.print("**    //Código a ejecutar si la condición1 es verdadera     **\n");
-                                System.out.print("**  } else if (condicion2){                                 **\n");
-                                System.out.print("**    //Código a ejecutar si la condición2 es verdadera     **\n");
-                                System.out.print("**  } else if (condicion3){                                 **\n");
-                                System.out.print("**    // Código a ejecutar si la condición3 es verdadera    **\n");
-                                System.out.print("**  } else {                                                **\n");
-                                System.out.print("**    //Código a ejecutar si ninguna de las condiciones     **\n");
-                                System.out.print("**       anteriores es verdadera                            **\n");
-                                System.out.print("**  }                                                       **\n");
-                                System.out.print("**************************************************************\n");
+                                Detalle.explicacionElseIf();
                                 break;
                             case 4:
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**               PROGRAMA IF, ELSE IF Y ELSE                **\n");
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**            Ejercicio de clasificación de Edad            **\n");
-                                System.out.print("** Ingresa tu edad:                                         **\n");
-                                    int edad = scanner.nextInt();
-                                    if (edad <= 11) {
-                                        System.out.println("Eres un niño");
-                                    } else if (edad >= 12 && edad <= 18) {
-                                        System.out.println("Eres un adolescente");
-                                    } else if (edad >= 19 && edad <= 59) {
-                                        System.out.println("Eres un adulto");
-                                    } else {
-                                        System.out.println("Eres un anciano");
-                                    }
-                                    scanner.nextLine();
-                                System.out.print("**************************************************************\n");
-                                    break;
+                                Programas.programaIf(scanner);
+                                break;
                             case 0:
                                 System.out.println("Retornando al Menú Principal");
                                 break;
                             default:
                                 System.out.println("Opción no válida. Ingresa una opción entre el 0 y 4");
                         }
-                        System.out.print("Presiona 'Enter' para continuar...");
-                        scanner.nextLine();
-                        break;
-                    }
+                        Validaciones.accionContinuar(scanner);
+                    }while (condicionalIf != 0);
                     break;
                 case 6:
-                    int opSw = -1;
-                    while (true) {
+                    int condicionalSwitch = -1;
+                    do {
                         System.out.print("**************************************************************\n");
                         System.out.print("**              CONDICIONALES SWITCH                        **\n");
                         System.out.print("**************************************************************\n");
@@ -443,9 +274,12 @@ public class Main {
                         System.out.print("**           0.   Retornar al Menu Principal                **\n");
                         System.out.print("**************************************************************\n");
                         System.out.print("Digita una opción: ");
-                        opSw = scanner.nextInt();
+
+                        Validaciones.opcionValida(scanner);
+
+                        condicionalSwitch = scanner.nextInt();
                         scanner.nextLine();
-                        switch (opSw) {
+                        switch (condicionalSwitch) {
                             case 1:
                                 System.out.print("**************************************************************\n");
                                 System.out.print("**                   CONDICIONAL SHITCH                     **\n");
@@ -522,55 +356,24 @@ public class Main {
                         }
                         System.out.print("Presiona Enter para continuar...");
                         scanner.nextLine();
-                        break;
-                    }
+
+                    }while (condicionalSwitch != 0);
                     break;
                 case 7:
-                    int ternaria = -1;
-                    while (true) {
-                        System.out.print("**************************************************************\n");
-                        System.out.print("**                       MENÚ TERNARIA                      **\n");
-                        System.out.print("**************************************************************\n");
-                        System.out.print("**           1.   Condicional Ternaria                      **\n");
-                        System.out.print("**           2.   Programa de Ternaria                      **\n");
-                        System.out.print("**           0.   Retornar al Menu Principal                **\n");
-                        System.out.print("**************************************************************\n");
-                        System.out.print("Digita una opción: ");
-                        ternaria = scanner.nextInt();
+                    int condicionalTernaria = -1;
+                    do {
+                        SubMenu.menuTernaria();
+
+                        Validaciones.opcionValida(scanner);
+
+                        condicionalTernaria = scanner.nextInt();
                         scanner.nextLine();
-                        switch (ternaria) {
+                        switch (condicionalTernaria) {
                             case 1:
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**                   CONDICIONAL TERNARIA                   **\n");
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**  El operador ternario es útil para simplificar la        **\n");
-                                System.out.print("**  escritura de expresiones condicionales simples.         **\n");
-                                System.out.print("**  Se compone de tres partes:                              **\n");
-                                System.out.print("**  - La condición a evaluar (condición booleana)           **\n");
-                                System.out.print("**  - El valor si la condición es verdadera                 **\n");
-                                System.out.print("**  - El valor si la condición es falsa                     **\n");
-                                System.out.print("**  El operador ternario en Java es una construcción que    **\n");
-                                System.out.print("**  permite tomar decisiones basadas en una condición       **\n");
-                                System.out.print("**  booleana de manera concisa en una sola línea de código  **\n");
-                                System.out.print("**                                                          **\n");
-                                System.out.print("**  Ejemplo:                                                **\n");
-                                System.out.print("**   int edad = 20;                                         **\n");
-                                System.out.print("**   String mensaje = (edad >= 18) ?                        **\n");
-                                System.out.print("**   'Eres mayor de edad' : 'Eres menor de edad';           **\n");
-                                System.out.print("**   System.out.println(mensaje);                           **\n");
-                                System.out.print("**************************************************************\n");
+                                Detalle.explicacionTernaria();
                                 break;
                             case 2:
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**                     PROGRAMA TERNARIA                    **\n");
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**   Ejercicio para calcular si un número es par o impar    **\n");
-                                System.out.print("** Ingresa un número:                                       **\n");
-                                int numero = scanner.nextInt();
-                                String resultado = (numero % 2 == 0 ) ? "Par":"Impar";
-                                System.out.println("El número " + numero + " es: " +resultado);
-                                scanner.nextLine();
-                                System.out.print("**************************************************************\n");
+                                Programas.programaTernaria(scanner);
                                 break;
                             case 0:
                                 System.out.println("Retornando al Menú Principal");
@@ -578,14 +381,12 @@ public class Main {
                             default:
                                 System.out.println("Opción no válida. Ingresa una opción entre el 0 y 2");
                         }
-                        System.out.print("Presiona Enter para continuar...");
-                        scanner.nextLine();
-                        break;
-                    }
+                        Validaciones.accionContinuar(scanner);
+                    }while (condicionalTernaria != 0);
                     break;
                 case 8:
-                    int opDoW = -1;
-                    while (true) {
+                    int bucleDoWhile = -1;
+                    do {
                         System.out.print("**************************************************************\n");
                         System.out.print("**                        DO WHILE                          **\n");
                         System.out.print("**************************************************************\n");
@@ -594,9 +395,12 @@ public class Main {
                         System.out.print("**           0.   Retornar al Menu Principal                **\n");
                         System.out.print("**************************************************************\n");
                         System.out.print("Digita una opción: ");
-                        opDoW = scanner.nextInt();
+
+                        Validaciones.opcionValida(scanner);
+
+                        bucleDoWhile = scanner.nextInt();
                         scanner.nextLine();
-                        switch (opDoW) {
+                        switch (bucleDoWhile) {
                             case 1:
                                 System.out.print("**************************************************************\n");
                                 System.out.print("**                CONDICIONAL DO WHILE                      **\n");
@@ -624,21 +428,21 @@ public class Main {
                                 System.out.print("** Bienvenid@, vamos a jugar a adivinar el numero...        **\n");
                                 System.out.print("** ¡Hemos pensado en un numero de 1 a 100!                  **\n");
                                 Random random = new Random();
-                                int secreto= random.nextInt(100)+1;
-                                int numeroi =0;
-                                boolean numero= false;
+                                int secreto = random.nextInt(100) + 1;
+                                int numeroi = 0;
+                                boolean numero = false;
                                 System.out.print("** Intenta adivinarlo.....                                  **\n");
-                                do{
-                                System.out.print("** Introduce un número por favor                            **\n");
-                                    numeroi= scanner.nextInt();
-                                    if(numeroi < secreto){
-                                System.out.print("** Muy bajo, Intenta de nuevo.                              **\n");
+                                do {
+                                    System.out.print("** Introduce un número por favor                            **\n");
+                                    numeroi = scanner.nextInt();
+                                    if (numeroi < secreto) {
+                                        System.out.print("** Muy bajo, Intenta de nuevo.                              **\n");
                                     } else if (numeroi > secreto) {
-                                System.out.print("** Muy alto, Intenta de nuevo.                              **\n");
+                                        System.out.print("** Muy alto, Intenta de nuevo.                              **\n");
                                     } else {
-                                System.out.print("**¡Felicidades! adivinaste el numero es: " + secreto +        "\n");
-                                scanner.nextLine();
-                                numero= true;
+                                        System.out.print("**¡Felicidades! adivinaste el numero es: " + secreto + "\n");
+                                        scanner.nextLine();
+                                        numero = true;
                                     }
                                 } while (!numero);
                                 System.out.print("**************************************************************\n");
@@ -652,55 +456,24 @@ public class Main {
                         }
                         System.out.print("Presiona Enter para continuar...");
                         scanner.nextLine();
-                        break;
-                    }
+
+                    }while (bucleDoWhile != 0);
                     break;
                 case 9:
-                    int cond_while = -1;
-                    while (true) {
-                        System.out.print("**************************************************************\n");
-                        System.out.print("**                     MENÚ BUCLE WHILE                     **\n");
-                        System.out.print("**************************************************************\n");
-                        System.out.print("**           1.   Condicional While                         **\n");
-                        System.out.print("**           2.   Programa de While                         **\n");
-                        System.out.print("**           0.   Retornar al Menu Principal                **\n");
-                        System.out.print("**************************************************************\n");
-                        System.out.print("Digita una opción: ");
-                        cond_while = scanner.nextInt();
+                    int bucleWhile = -1;
+                    do {
+                        SubMenu.menuWhile();
+
+                        Validaciones.opcionValida(scanner);
+
+                        bucleWhile = scanner.nextInt();
                         scanner.nextLine();
-                        switch (cond_while) {
+                        switch (bucleWhile) {
                             case 1:
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**                   CONDICIONAL WHILE                      **\n");
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**  La sentencia while en Java es una estructura de control **\n");
-                                System.out.print("**  de ciclo que se utiliza para ejecutar un bloque de      **\n");
-                                System.out.print("**  código mientras se cumpla una determinada condición.    **\n");
-                                System.out.print("**                                                          **\n");
-                                System.out.print("**  La sintaxis básica de la sentencia while en Java es:    **\n");
-                                System.out.print("**   while (condición) {                                    **\n");
-                                System.out.print("**   // bloque de código a ejecutar mientras se cumpla      **\n");
-                                System.out.print("**   la condición                                           **\n");
-                                System.out.print("**   }                                                      **\n");
-                                System.out.print("**************************************************************\n");
+                                Detalle.explicacionWhile();
                                 break;
                             case 2:
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**                      PROGRAMA WHILE                      **\n");
-                                System.out.print("**************************************************************\n");
-                                System.out.print("**              Ejercicio sumatoria de números              **\n");
-                                System.out.print("** Ingresa un número para realizar la sumatoria:            **\n");
-                                int i = 0;
-                                int numero = scanner.nextInt();
-                                int suma = 0;
-
-                                while (i <= numero){
-                                    suma = suma + i;
-                                    i++;
-                                }
-                                System.out.println("La sumatoria total del número " + numero + " es: " +suma);
-                                scanner.nextLine();
-                                System.out.print("**************************************************************\n");
+                                Programas.programaWhile(scanner);
                                 break;
                             case 0:
                                 System.out.println("Retornando al Menú Principal");
@@ -708,68 +481,71 @@ public class Main {
                             default:
                                 System.out.println("Opción no válida. Ingresa una opción entre el 0 y 2");
                         }
-                        System.out.print("Presiona 'Enter' para continuar...");
-                        scanner.nextLine();
-                        break;
-                    }
+                        Validaciones.accionContinuar(scanner);
+
+                    }while (bucleWhile != 0);
                     break;
                 case 10:
-                    int opFor = -1;
-                    while (true) {
-                    System.out.print("**************************************************************\n");
-                    System.out.print("**                           FOR                            **\n");
-                    System.out.print("**************************************************************\n");
-                    System.out.print("**           1.   Condicional FOR                           **\n");
-                    System.out.print("**           2.   Programa de FOR                           **\n");
-                    System.out.print("**           0.   Retornar al Menu Principal                **\n");
-                    System.out.print("**************************************************************\n");
-                    System.out.print("Digita una opción: ");
-                    opFor = scanner.nextInt();
-                    scanner.nextLine();
-                    switch (opFor) {
-                        case 1:
-                            System.out.print("**************************************************************\n");
-                            System.out.print("**                   CONDICIONAL FOR                        **\n");
-                            System.out.print("**************************************************************\n");
-                            System.out.print("** La sentencia for en java es una estructura de control    **\n");
-                            System.out.print("** de ciclo que se utiliza para ejecutar un bloque de       **\n");
-                            System.out.print("** codigo una cantidad determinada de veces.                **\n");
-                            System.out.print("**                                                          **\n");
-                            System.out.print("**  Ejemplo:                                                **\n");
-                            System.out.print("**   for (inicialización; condición; actualización){        **\n");
-                            System.out.print("**     //Bloque de codigo a ejecutar                        **\n");
-                            System.out.print("**    }                                                     **\n");
-                            System.out.print("**************************************************************\n");
-                            break;
-                        case 2:
-                            System.out.print("**************************************************************\n");
-                            System.out.print("**                      PROGRAMA FOR                        **\n");
-                            System.out.print("**************************************************************\n");
-                            System.out.print("**              Ejercicio sumatoria de numeros              **\n");
-                            System.out.print("** Ingresa un numero para realizar la sumatoria:            **\n");
-                            int numero= scanner.nextInt();
-                            int suma = 0;
-                            for (int i= 1; i<=numero; i++){
-                                suma += i;
-                            }
-                            System.out.print("** La suma del 1 al " + numero + " es: " +  suma  +           "\n");
-                            System.out.print("**************************************************************\n");
-                            scanner.nextLine();
-                            break;
-                        case 0:
-                            System.out.println("Retornando al Menú Principal");
-                            break;
-                        default:
-                            System.out.println("Opción no válida. Ingresa una opción entre el 0 y 2");
-                    }
-                    System.out.print("Presiona Enter para continuar...");
-                    scanner.nextLine();
+                    int bucleFor = -1;
+                    do {
+                        System.out.print("**************************************************************\n");
+                        System.out.print("**                           FOR                            **\n");
+                        System.out.print("**************************************************************\n");
+                        System.out.print("**           1.   Condicional FOR                           **\n");
+                        System.out.print("**           2.   Programa de FOR                           **\n");
+                        System.out.print("**           0.   Retornar al Menu Principal                **\n");
+                        System.out.print("**************************************************************\n");
+                        System.out.print("Digita una opción: ");
+
+                        Validaciones.opcionValida(scanner);
+
+                        bucleFor = scanner.nextInt();
+                        scanner.nextLine();
+                        switch (bucleFor) {
+                            case 1:
+                                System.out.print("**************************************************************\n");
+                                System.out.print("**                   CONDICIONAL FOR                        **\n");
+                                System.out.print("**************************************************************\n");
+                                System.out.print("** La sentencia for en java es una estructura de control    **\n");
+                                System.out.print("** de ciclo que se utiliza para ejecutar un bloque de       **\n");
+                                System.out.print("** codigo una cantidad determinada de veces.                **\n");
+                                System.out.print("**                                                          **\n");
+                                System.out.print("**  Ejemplo:                                                **\n");
+                                System.out.print("**   for (inicialización; condición; actualización){        **\n");
+                                System.out.print("**     //Bloque de codigo a ejecutar                        **\n");
+                                System.out.print("**    }                                                     **\n");
+                                System.out.print("**************************************************************\n");
+                                break;
+                            case 2:
+                                System.out.print("**************************************************************\n");
+                                System.out.print("**                      PROGRAMA FOR                        **\n");
+                                System.out.print("**************************************************************\n");
+                                System.out.print("**              Ejercicio sumatoria de numeros              **\n");
+                                System.out.print("** Ingresa un numero para realizar la sumatoria:            **\n");
+                                int numero = scanner.nextInt();
+                                int suma = 0;
+                                for (int i = 1; i <= numero; i++) {
+                                    suma += i;
+                                }
+                                System.out.print("** La suma del 1 al " + numero + " es: " + suma + "\n");
+                                System.out.print("**************************************************************\n");
+                                scanner.nextLine();
+                                break;
+                            case 0:
+                                System.out.println("Retornando al Menú Principal");
+                                break;
+                            default:
+                                System.out.println("Opción no válida. Ingresa una opción entre el 0 y 2");
+                        }
+                        System.out.print("Presiona Enter para continuar...");
+                        scanner.nextLine();
+
+                    }while (bucleFor != 0);
                     break;
-                }
-                  default:
+                default:
                     System.out.println("Opción no válida. Ingresa una opción entre el 0 y 10");
             }
-        } while (opc != 0);
+        } while (opcion != 0);
         scanner.close();
     }
 
