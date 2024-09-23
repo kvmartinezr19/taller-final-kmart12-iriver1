@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d273a351-4140-4a5e-a76e-29ce9f47410a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ejecucion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ejecucion/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/explicaciones/Detalle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/explicaciones/Detalle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menus/MenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menus/MenuPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menus/SubMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menus/SubMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/programas/Programas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programas/Ejercicios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilidades/Validaciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilidades/Validaciones.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,14 +44,34 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Programación Basica/taller-final-kmart12-iriver1",
+    "last_opened_file_path": "D:/Git/Repositorio/Taller-final-POO/taller-final-kmart12-iriver1",
     "onboarding.tips.debug.path": "D:/Programación Basica/JavaPoo/src/Main.java"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ejecucion.Main" />
+      <module name="taller-final-kmart12-iriver1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ejecucion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="jdk-22-openjdk-22-3183f394aec4-bad0321e" />
       </set>
     </attachedChunks>
   </component>
