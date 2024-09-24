@@ -1,6 +1,4 @@
 package explicaciones;
-<<<<<<< HEAD
-
 import java.util.Scanner;
 
 public class Detalle {
@@ -210,12 +208,6 @@ public class Detalle {
         System.out.print("**   }                                                      **\n");
         System.out.print("**************************************************************\n");
     }
-
-
-
-
-=======
-public class Detalle {
     public static void string(){
         System.out.print("**************************************************************\n");
         System.out.print("**                          STRING                          **\n");
@@ -346,7 +338,7 @@ public class Detalle {
           System.out.print("**    --    ** Int a =5; a--;     ** Result:4.                               ** \n");
           System.out.print("******************************************************************************* \n");
       }
-      public static void swich(){
+      public static void condicionalSwitch(){
           System.out.print("**************************************************************\n");
           System.out.print("**                   CONDICIONAL SHITCH                     **\n");
           System.out.print("**************************************************************\n");
@@ -412,6 +404,4 @@ public class Detalle {
           System.out.print("**    }                                                     **\n");
           System.out.print("**************************************************************\n");
       }
->>>>>>> f3007ca13e536accdd49a1cc4ab5ee852818d9c7
-
 }

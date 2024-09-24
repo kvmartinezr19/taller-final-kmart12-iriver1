@@ -3,15 +3,10 @@ package menus;
 import java.util.Scanner;
 
 public class MenuPrincipal {
-<<<<<<< HEAD
 
-    public static void menuPrincipal(){
+    public static void menuPrincipal() {
 
 
-=======
-    public static void menuPrincipal(){
-
->>>>>>> f3007ca13e536accdd49a1cc4ab5ee852818d9c7
         System.out.print("**************************************************************\n");
         System.out.print("**                       MENÚ PRINCIPAL                     **\n");
         System.out.print("**                 CAPÍTULO DE PROGRAMACIÓN                 **\n");
@@ -33,13 +28,7 @@ public class MenuPrincipal {
         System.out.print("**************************************************************\n");
         System.out.print("**************************************************************\n");
         System.out.print("Selecciona una opción del menú principal: ");
-<<<<<<< HEAD
-    }
-
-
-
-=======
 
     }
->>>>>>> f3007ca13e536accdd49a1cc4ab5ee852818d9c7
 }
+
